@@ -494,21 +494,23 @@
         <div class="form-wrapper">
           <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="want-tour-form flex">
             <label class="field-label">
-              Город вылета<br><br>
+              <span class="label-capture">
+                Город вылета
+              </span>
               <select class="form-select" name="city" required>
-                <option value disabled selected>Выберите город</option>
                 <option value="Москва">Москва</option>
-                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                <option value="Санкт-Петербург" selected>Санкт-Петербург</option>
                 <option value="Казань">Казань</option>
                 <option value="Сочи">Сочи</option>
                 <option value="Волгоград">Волгоград</option>
               </select>
             </label>
             <label class="field-label">
-              Страна<br><br>
+              <span class="label-capture">
+              Страна
+              </span>
               <select class="form-select" name="country" required>
-                <option value disabled selected>Выберите страну</option>
-                <option value="Австралия">Австралия</option>
+                <option value="Австралия" selected>Австралия</option>
                 <option value="США">США</option>
                 <option value="Франция">Франция</option>
                 <option value="Испания">Испания</option>
@@ -519,16 +521,22 @@
               </select>
             </label>
             <label class="field-label">
-              Дата прибытия<br><br>
+              <span class="label-capture">
+              Дата прибытия
+              </span>
               <input class="form-input" type="date" name="date" value="2023-07-22" required>
             </label>
             <label class="field-label">
-              Ночей<br><br>
-              <input class="form-input" type="number" name="nights" min="1" max="50" value="6" required>
+              <span class="label-capture label-capture-num">
+              Ночей
+              </span>
+              <input class="form-input form-input-num" type="number" name="nights" min="1" max="50" value="6" required>
             </label>
             <label class="field-label">
-              Туристы<br><br>
-              <input class="form-input" type="number" name="tourists" min="1" max="15" value="2" required>
+              <span class="label-capture label-capture-num">
+              Туристы
+              </span>
+              <input class="form-input form-input-num" type="number" name="tourists" min="1" max="15" value="2" required>
             </label>
             <button class="btn btn-reset form-btn" type="submit">
               Найти
@@ -561,10 +569,10 @@
                   Телефоны
                 </h3>
                 <div class="address-info-wrapper flex">
-                  <a href="tel:+74995356434" class="contacts-item-link">
+                  <a class="contacts-item-link" href="tel:+74995356434">
                     +7 499 535-64-34
                   </a>
-                  <a href="tel:+74950050544" class="contacts-item-link">
+                  <a class="contacts-item-link" href="tel:+74950050544">
                     +7 495 005-05-44
                   </a>
                 </div>
@@ -574,13 +582,13 @@
                   Email
                 </h3>
                 <div class="address-info-wrapper flex">
-                  <a href="mailto:lg.oona@mail.ru" class="contacts-item-link">
+                  <a class="contacts-item-link" href="mailto:lg.oona@mail.ru">
                     lg.oona@mail.ru
                   </a>
                   <p class="email-caption">
                     по&nbsp;вопросам бронирования
                   </p>
-                  <a href="mailto:hotels.ln@mail.ru" class="contacts-item-link">
+                  <a class="contacts-item-link" href="mailto:hotels.ln@mail.ru">
                     hotels.ln@mail.ru
                   </a>
                   <p class="email-caption">
@@ -604,7 +612,7 @@
             </button>
           </div>
           <div class="right-contacts">
-            <img src="../imgs/contacts-img.jpg" alt="Стойка регистрации в отеле">
+            <img class="contacts-img" src="imgs/contacts-img.jpg" alt="Стойка регистрации в отеле">
           </div>
         </div>
       </div>
@@ -630,18 +638,18 @@
             11710, улица Юности, дом 5&nbsp;строение&nbsp;4, офис&nbsp;2
           </p>
           <div class="address-info-wrapper flex footer-tel">
-            <a href="tel:+74995356434" class="contacts-item-link">
+            <a class="contacts-item-link" href="tel:+74995356434">
               +7 499 535-64-34
             </a>
-            <a href="tel:+74950050544" class="contacts-item-link">
+            <a class="contacts-item-link" href="tel:+74950050544">
               +7 495 005-05-44
             </a>
           </div>
           <div class="address-info-wrapper flex">
-            <a href="mailto:lg.oona@mail.ru" class="contacts-item-link">
+            <a class="contacts-item-link" href="mailto:lg.oona@mail.ru">
               lg.oona@mail.ru
             </a>
-            <a href="mailto:hotels.ln@mail.ru" class="contacts-item-link">
+            <a class="contacts-item-link" href="mailto:hotels.ln@mail.ru">
               hotels.ln@mail.ru
             </a>
           </div>
