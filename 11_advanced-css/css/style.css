@@ -1,4 +1,19 @@
-@import "./palette.css";
+:root {
+  --light-brown: #f0bf5f;
+  --brown: #cc9933;
+  --dark-brown: #a47312;
+  --light-blue: #cee8fa;
+  --white: #fff;
+  --gradient: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%);
+  --gradient-bot-top: linear-gradient(360deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%);
+  --grey-1: #f1f1f1;
+  --grey-2: #e9e9e9;
+  --grey-3: #999;
+  --grey-4: #666;
+  --grey-5: #333;
+  --black: #000;
+
+}
 
 html {
   box-sizing: border-box;
@@ -131,7 +146,7 @@ body {
   font-size: 20px;
   line-height: 20px;
   color: var(--grey-4);
-  outline: transparent;
+  outline: 1px solid transparent;
   outline-offset: 5px;
   transition: color 0.3s ease-in-out, outline 0.3s ease-in-out;
 }
@@ -146,7 +161,7 @@ body {
 }
 
 .header-tel-link:active {
-  outline: transparent;
+  outline: 1px solid transparent;
   color: var(--dark-brown);
 }
 
@@ -159,7 +174,7 @@ body {
   background-position: left center;
   background-size: 21px 12px;
   background-repeat: no-repeat;
-  outline: transparent;
+  outline: 1px solid transparent;
   outline-offset: 5px;
   transition: color 0.3s ease-in-out, outline 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
@@ -174,7 +189,7 @@ body {
 }
 
 .header-personal-account:active {
-  outline: transparent;
+  outline: 1px solid transparent;
   color: var(--dark-brown);
   background-image: url("../imgs/header-arrow.svg");
 }
@@ -203,7 +218,7 @@ body {
   font-size: 16px;
   line-height: 16px;
   color: var(--grey-4);
-  outline: transparent;
+  outline: 1px solid transparent;
   outline-offset: 5px;
   transition: color 0.3s ease-in-out, outline 0.3s ease-in-out;
 }
@@ -218,7 +233,7 @@ body {
 }
 
 .header-link:active {
-  outline: transparent;
+  outline: 1px solid transparent;
   color: var(--dark-brown);
 }
 
@@ -240,7 +255,7 @@ body {
 
 .header-link-tour:focus,
 .button:focus {
-  outline: transparent;
+  outline: 1px solid transparent;
   background-color: var(--brown);
   color: var(--white);
 }
@@ -323,8 +338,8 @@ body {
   background-position: right center;
   background-size: 17px 17px;
   background-repeat: no-repeat;
-  outline: transparent;
-  transition: color 0.3s ease-in-out;
+  outline: 1px solid transparent;
+  transition: color 0.3s ease-in-out, padding-right 0.3s ease-in-out;
 }
 
 .offer-link::before {
@@ -342,6 +357,11 @@ body {
 
 .offer-link:focus::before {
   opacity: 1;
+}
+
+.offer-link:hover {
+  padding-right: 30px;
+  background-position: right;
 }
 
 .offer-link:active {
@@ -432,8 +452,8 @@ body {
   background-position: right center;
   background-size: 17px 17px;
   background-repeat: no-repeat;
-  outline: transparent;
-  transition: color 0.3s ease-in-out, background-image 0.3s ease-in-out;
+  outline: 1px solid transparent;
+  transition: color 0.3s ease-in-out, background-image 0.3s ease-in-out, padding-right 0.3s ease-in-out;
 }
 
 .service-link::before {
@@ -454,12 +474,17 @@ body {
 }
 
 .service-link:hover {
+  padding-right: 30px;
+  background-position: right;
+}
+
+.service-link:hover {
   color: var(--light-brown);
   background-image: url("../imgs/service-arrow-hover.svg");
 }
 
 .service-link:active {
-  outline: transparent;
+  outline: 1px solid transparent;
   color: var(--dark-brown);
   background-image: url("../imgs/service-arrow.svg");
 }
@@ -648,7 +673,7 @@ body {
 }
 
 .hotel-rooms-link:focus {
-  outline: transparent;
+  outline: 1px solid transparent;
   background-color: var(--brown);
   color: var(--white);
 }
@@ -748,7 +773,7 @@ body {
 }
 
 .form-btn:focus {
-  outline: transparent;
+  outline: 1px solid transparent;
   background-color: var(--brown);
   color: var(--white);
 }
@@ -834,7 +859,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-size: 16px;
   line-height: 150%;
   color: var(--brown);
-  outline: transparent;
+  outline: 1px solid transparent;
   outline-offset: 2px;
   transition: color 0.3s ease-in-out, outline 0.3s ease-in-out;
 }
@@ -849,7 +874,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .contacts-item-link:active {
-  outline: transparent;
+  outline: 1px solid transparent;
   color: var(--dark-brown);
 }
 
@@ -870,7 +895,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .contacts-btn:focus {
-  outline: transparent;
+  outline: 1px solid transparent;
   background-color: var(--brown);
   color: var(--white);
 }
@@ -925,6 +950,23 @@ input[type=number]::-webkit-inner-spin-button {
   font-size: 16px;
   line-height: 150%;
   color: var(--brown);
+  outline: 1px solid transparent;
+  outline-offset: 2px;
+  transition: color 0.3s ease-in-out, outline 0.3s ease-in-out;
+}
+
+.footer-link:focus {
+  outline: 1px solid var(--brown);
+  color: var(--brown);
+}
+
+.footer-link:hover {
+  color: var(--light-brown);
+}
+
+.footer-link:active {
+  outline: 1px solid transparent;
+  color: var(--dark-brown);
 }
 
 .address-text {
@@ -958,7 +1000,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .social-link:focus {
-  outline: transparent;
+  outline: 1px solid transparent;
 }
 
 .social-link:focus svg {
