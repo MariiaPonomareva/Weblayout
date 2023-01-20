@@ -105,8 +105,9 @@ body {
 }
 
 .container {
-  max-width: 1770px;
-  margin: 0 3.7%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .title-h2 {
@@ -515,16 +516,17 @@ body {
   color: var(--black)
 }
 
-.about-us__item_bg-box {
-  background-image: url("../imgs/about-us-box.svg");
+.about-us__item_bg {
   background-position: 60px center;
   background-repeat: no-repeat;
 }
 
+.about-us__item_bg-box {
+  background-image: url("../imgs/about-us-box.svg");
+}
+
 .about-us__item_bg-settings {
   background-image: url("../imgs/about-us-settings.svg");
-  background-position: 60px center;
-  background-repeat: no-repeat;
 }
 
 /* how we work */
@@ -697,6 +699,11 @@ body {
   border-bottom: 1px solid var(--grey-1);
   margin-bottom: -1px;
   outline: 1px solid transparent;
+  text-align: left;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--black);
 }
 
 .faq__btn:last-child {
@@ -715,11 +722,8 @@ body {
 .faq__btn:focus, .faq__btn:hover {
   z-index: 2;
   border-color: var(--bright-sand);
-  outline: transparent;
-}
-
-.faq__btn:focus p {
   color: var(--bright-sand);
+  outline: transparent;
 }
 
 .faq__btn:focus svg {
@@ -728,10 +732,6 @@ body {
 
 .faq__btn:focus svg path {
   fill: var(--white);
-}
-
-.faq__btn:hover p {
-  color: var(--bright-sand);
 }
 
 .faq__btn:hover svg {
@@ -744,9 +744,6 @@ body {
 
 .faq__btn:active {
   border-color: var(--grey-1);
-}
-
-.faq__btn:active p {
   color: var(--black);
 }
 
@@ -758,14 +755,6 @@ body {
   fill: var(--black);
   transform-origin: center;
   transform: rotate(45deg);
-}
-
-.faq__text {
-  text-align: left;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  color: var(--black);
 }
 
 /* footer */
