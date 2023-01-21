@@ -12,7 +12,6 @@
   --grey-4: #666;
   --grey-5: #333;
   --black: #000;
-
 }
 
 html {
@@ -246,6 +245,7 @@ body {
   padding: 13px 20px;
   font-size: 16px;
   line-height: 16px;
+  cursor: pointer;
   color: var(--brown);
   border: 1px solid var(--brown);
   border-radius: 10px;
@@ -365,6 +365,7 @@ body {
 }
 
 .offer-link:active {
+  padding-right: 17px;
   color: var(--white);
 }
 
@@ -484,6 +485,7 @@ body {
 }
 
 .service-link:active {
+  padding-right: 22px;
   outline: 1px solid transparent;
   color: var(--dark-brown);
   background-image: url("../imgs/service-arrow.svg");
