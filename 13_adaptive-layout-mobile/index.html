@@ -306,7 +306,9 @@
           <li class="faq__item">
             <h3 class="title-h3">
               <button class="btn btn_reset faq__btn flex">
+                <span class="faq__btn-text">
                 Из&nbsp;чего формируется конечная стоимость проекта?
+                </span>
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="25" cy="25" rx="25" ry="25" />
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -318,7 +320,9 @@
           <li class="faq__item">
             <h3 class="title-h3">
               <button class="btn btn_reset faq__btn flex">
+                <span class="faq__btn-text">
                 У&nbsp;меня есть свой проект. Сможем&nbsp;ли мы&nbsp;его доработать&nbsp;/ реализовать?
+                </span>
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="25" cy="25" rx="25" ry="25" />
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -330,7 +334,9 @@
           <li class="faq__item">
             <h3 class="title-h3">
               <button class="btn btn_reset faq__btn flex">
+                <span class="faq__btn-text">
                 Я&nbsp;выбираю между разными компаниями. В&nbsp;чём ваше отличие?
+                </span>
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="25" cy="25" rx="25" ry="25" />
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -342,8 +348,9 @@
           <li class="faq__item">
             <h3 class="title-h3">
               <button class="btn btn_reset faq__btn flex">
-                Могу&nbsp;ли я&nbsp;делегировать вам работу&nbsp;/ согласование с&nbsp;подрядчиком&nbsp;/
-                организацией?
+                <span class="faq__btn-text">
+                Могу&nbsp;ли я&nbsp;делегировать вам работу&nbsp;/ согласование с&nbsp;подрядчиком&nbsp;/организацией?
+                </span>
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="25" cy="25" rx="25" ry="25" />
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -355,7 +362,9 @@
           <li class="faq__item">
             <h3 class="title-h3">
               <button class="btn btn_reset faq__btn flex">
+                <span class="faq__btn-text">
                 Могу&nbsp;ли я&nbsp;вернуть деньги на&nbsp;каком-либо из&nbsp;этапов работ?
+                </span>
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="25" cy="25" rx="25" ry="25" />
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -445,9 +454,15 @@
           <input class="footer__input" type="text" name="name" placeholder="Фамилия, имя и&nbsp;отчество*" required>
           <input class="footer__input" type="email" name="email" placeholder="Email*" required>
           <textarea class="footer__textarea" name="comment" placeholder="Сообщение"></textarea>
-          <button class="btn btn-reset footer__btn" type="submit">
+          <div class="footer__wrapper flex">
+          <button class="btn btn_reset footer__btn" type="submit">
             Отправить данные
           </button>
+          <label class="footer__form-check">
+            <input class="checkbox" type="checkbox" name="" required>
+            <span class="checkbox__txt">Согласен на&nbsp;обработку данных</span>
+          </label>
+        </div>
         </form>
       </div>
       <div class="footer-right flex">

@@ -81,7 +81,6 @@ img {
 }
 
 body {
-  max-width: 1920px;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
   background-color: var(--white);
@@ -147,6 +146,8 @@ body {
 }
 
 .header-container {
+  max-width: 1770px;
+  margin: 0 auto;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -272,7 +273,7 @@ body {
 }
 
 .header__search:active::before {
- opacity: 0;
+  opacity: 0;
 }
 
 .header__search-form {
@@ -308,13 +309,13 @@ body {
   outline: 1px solid transparent;
 }
 
-.header__search-close svg circle{
+.header__search-close svg circle {
   stroke: var(--grey-1);
   stroke-width: 2;
   transition: stroke 0.3s ease-in-out;
 }
 
-.header__search-close svg rect{
+.header__search-close svg rect {
   fill: var(--grey-1);
   transition: fill 0.3s ease-in-out;
 }
@@ -336,11 +337,11 @@ body {
   opacity: 1;
 }
 
-.header__search-close:hover svg circle{
+.header__search-close:hover svg circle {
   stroke: var(--bright-sand);
 }
 
-.header__search-close:hover svg rect{
+.header__search-close:hover svg rect {
   fill: var(--bright-sand);
 }
 
@@ -348,12 +349,12 @@ body {
   stroke: var(--black);
 }
 
-.header__search-close:active svg rect{
+.header__search-close:active svg rect {
   fill: var(--black);
 }
 
 .header__search-close:active::before {
- opacity: 0;
+  opacity: 0;
 }
 
 /* hero */
@@ -454,7 +455,6 @@ body {
   font-size: 16px;
   line-height: 32px;
   color: var(--white)
-
 }
 
 .about-us__link {
@@ -625,7 +625,7 @@ body {
 }
 
 .how-we-work__link:focus {
- background-color: var(--beige);
+  background-color: var(--beige);
 }
 
 .how-we-work__link:hover {
@@ -670,7 +670,7 @@ body {
 .how-we-work__item-right {
   width: 49.1%;
   background-image: url("../imgs/how-we-work-consult.jpg");
-  background-position: top;
+  background-position: 2px 10px;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 32px;
@@ -716,7 +716,8 @@ body {
   fill: var(--black);
 }
 
-.faq__btn:focus, .faq__btn:hover {
+.faq__btn:focus,
+.faq__btn:hover {
   z-index: 2;
   border-color: var(--bright-sand);
   color: var(--bright-sand);
@@ -754,13 +755,19 @@ body {
   transform: rotate(45deg);
 }
 
+.faq__btn-text {
+  margin-right: 20px;
+}
+
 /* footer */
 .footer {
-  padding: 50px 75px 50px 69px;
+  padding: 50px 63px 50px 69px;
   background-color: var(--black);
 }
 
 .footer-container {
+  max-width: 1770px;
+  margin: 0 auto;
   align-items: stretch;
   justify-content: space-between;
 }
@@ -940,9 +947,14 @@ body {
   color: var(--white);
 }
 
+.footer__wrapper {
+  align-items: center;
+
+}
+
 .footer__btn {
   width: fit-content;
-  align-self: center;
+  margin-right: 22px;
   cursor: pointer;
   padding: 19px 52px;
   font-weight: 700;
@@ -956,7 +968,7 @@ body {
 }
 
 .footer__btn:focus {
- background-color: var(--beige);
+  background-color: var(--beige);
 }
 
 .footer__btn:hover {
@@ -965,6 +977,15 @@ body {
 
 .footer__btn:active {
   background-color: var(--brown);
+}
+
+.footer__form-check {
+  width: fit-content;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--grey-1);
+  cursor: pointer;
 }
 
 .footer-right {
