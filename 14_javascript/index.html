@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Евклид - проектные системы</title>
+  <link rel="stylesheet" href="libs/accordion.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
@@ -30,7 +32,7 @@
         <img src="imgs/Logo-header.png" alt="Переход в начало главной страницы сайта компании Евклид">
       </a>
       <div class="header__wrapper flex">
-        <nav class="header__nav">
+        <nav class="header__nav flex">
           <ul class="list list_reset header__nav-list flex">
             <li class="header__nav-item">
               <a class="header__nav-link" href="#about-us">
@@ -60,7 +62,7 @@
           </ul>
         </nav>
         <div class="header__search-wrapper">
-          <button class="btn btn_reset header__search">
+          <button class="btn btn_reset header__search header__search_unactive">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="7.56126" height="1.89031"
                 transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" />
@@ -68,7 +70,7 @@
                 d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" />
             </svg>
           </button>
-          <form class="header__search-form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
+          <form class="header__search-form flex header__search_active" action="https://jsonplaceholder.typicode.com/posts" method="post">
             <input class="header__input" type="text" name="search" placeholder="Что будем искать?">
             <button class="btn btn_reset header__search-btn" type="submit">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,17 +97,30 @@
 
   <main class="main">
     <div class="container hero__container">
-      <section class="hero">
-        <h1 class="title-h1">
-          Проектные решения любой сложности
-        </h1>
-        <p class="text hero__text">
-          Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом
-          проектантов
-        </p>
-        <button class="hero__btn btn_reset">
-          Заказать расчёт
-        </button>
+      <section class="hero slider main__slider">
+        <div class="slider__info">
+          <h1 class="title-h1">
+            Проектные решения любой сложности
+          </h1>
+          <p class="text hero__text">
+            Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом
+            проектантов
+          </p>
+          <button class="hero__btn btn_reset">
+            Заказать расчёт
+          </button>
+        </div>
+        <div class="swiper slider__swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper slider__wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide slider__slide slider__slide_img1"></div>
+            <div class="swiper-slide slider__slide slider__slide_img2"></div>
+            <div class="swiper-slide slider__slide slider__slide_img3"></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
       </section>
     </div>
 
@@ -173,27 +188,27 @@
         </h2>
         <ul class="list list_reset how-we-work__list flex">
           <li class="how-we-work__item">
-            <a class="how-we-work__step" href="#">
+            <a class="how-we-work__step how-we-work__step_active" data-path="step-1" href="#step-1">
               1&nbsp;шаг
             </a>
           </li>
           <li class="how-we-work__item">
-            <a class="how-we-work__step" href="#">
+            <a class="how-we-work__step" data-path="step-2" href="#step-2">
               2&nbsp;шаг
             </a>
           </li>
           <li class="how-we-work__item">
-            <a class="how-we-work__step" href="#">
+            <a class="how-we-work__step" data-path="step-3" href="#step-3">
               3&nbsp;шаг
             </a>
           </li>
           <li class="how-we-work__item">
-            <a class="how-we-work__step" href="#">
+            <a class="how-we-work__step" data-path="step-4" href="#step-4">
               4&nbsp;шаг
             </a>
           </li>
         </ul>
-        <div class="how-we-work__item-wrapper flex">
+        <div class="how-we-work__item-wrapper flex how-we-work__item_active" data-target="step-1">
           <div class="how-we-work__item-left">
             <h3 class="title-h3 how-we-work__item-title">
               Проводим консультацию
@@ -215,11 +230,11 @@
               Договор
             </button>
           </div>
-          <div class="how-we-work__item-right">
+          <div class="how-we-work__item-right how-we-work__item-right-1">
 
           </div>
         </div>
-        <div class="how-we-work__item-wrapper how-we-work__item-wrapper_invisible flex">
+        <div class="how-we-work__item-wrapper flex" data-target="step-2">
           <div class="how-we-work__item-left">
             <h3 class="title-h3 how-we-work__title">
               Составляем смету
@@ -235,15 +250,15 @@
             <a class="link how-we-work__link" href="#">
               Подробнее
             </a>
-            <button class="btn btn_reset">
+            <button class="btn btn_reset how-we-work__btn">
               Договор
             </button>
           </div>
-          <div class="how-we-work__item-right">
+          <div class="how-we-work__item-right how-we-work__item-right-2">
 
           </div>
         </div>
-        <div class="how-we-work__item-wrapper how-we-work__item-wrapper_invisible flex">
+        <div class="how-we-work__item-wrapper flex" data-target="step-3">
           <div class="how-we-work__item-left">
             <h3 class="title-h3 how-we-work__title">
               Привлекаем подрядчиков
@@ -261,15 +276,15 @@
             <a class="link how-we-work__link" href="#">
               Подробнее
             </a>
-            <button class="btn btn_reset">
+            <button class="btn btn_reset how-we-work__btn">
               Договор
             </button>
           </div>
-          <div class="how-we-work__item-right">
+          <div class="how-we-work__item-right how-we-work__item-right-3">
 
           </div>
         </div>
-        <div class="how-we-work__item-wrapper how-we-work__item-wrapper_invisible flex">
+        <div class="how-we-work__item-wrapper flex" data-target="step-4">
           <div class="how-we-work__item-left">
             <h3 class="title-h3 how-we-work__title">
               Инспектируем все этапы работ
@@ -286,11 +301,11 @@
             <a class="link how-we-work__link" href="#">
               Подробнее
             </a>
-            <button class="btn btn_reset">
+            <button class="btn btn_reset how-we-work__btn">
               Договор
             </button>
           </div>
-          <div class="how-we-work__item-right">
+          <div class="how-we-work__item-right how-we-work__item-right-4">
 
           </div>
         </div>
@@ -302,74 +317,195 @@
         <h2 class="title-h2 faq__title">
           Часто задаваемые вопросы
         </h2>
-        <ul class="list list_reset faq__list">
-          <li class="faq__item">
-            <h3 class="title-h3">
-              <button class="btn btn_reset faq__btn flex">
-                <span class="faq__btn-text">
-                Из&nbsp;чего формируется конечная стоимость проекта?
-                </span>
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <ellipse cx="25" cy="25" rx="25" ry="25" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" />
-                </svg>
+        <ul class="list list_reset faq__list accordion-list">
+          <li class="faq__item accordion">
+            <h3 class="title-h3 ac-header">
+              <button class="btn btn_reset faq__btn flex accordion__control">
+                <div class="faq__btn-wrapper">
+                  <span class="faq__btn-text">
+                    Из&nbsp;чего формируется конечная стоимость проекта?
+                  </span>
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="25" rx="25" ry="25" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" />
+                  </svg>
+                </div>
+                <div class="accordion__content">
+                  <p class="text accordion__text-1">
+                    Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
+                    нас
+                    к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+                    Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью
+                    первоочередных требований. А&nbsp;ещё некоторые особенности внутренней политики, которые
+                    представляют собой яркий пример континентально-европейского типа политической культуры, будут
+                    объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. И&nbsp;нет сомнений, что явные
+                    признаки победы институционализации призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+                    очередь, должны быть указаны как претенденты на&nbsp;роль ключевых факторов.
+                  </p>
+                  <p class="text accordion__text">
+                    Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны
+                    к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определённых
+                    слоёв населения,
+                    а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные,
+                    но&nbsp;неопровержимые выводы,
+                    а&nbsp;также многие известные личности призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+                    очередь, должны быть представлены в&nbsp;исключительно положительном свете.
+                  </p>
+                </div>
               </button>
             </h3>
           </li>
-          <li class="faq__item">
-            <h3 class="title-h3">
-              <button class="btn btn_reset faq__btn flex">
-                <span class="faq__btn-text">
-                У&nbsp;меня есть свой проект. Сможем&nbsp;ли мы&nbsp;его доработать&nbsp;/ реализовать?
-                </span>
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <ellipse cx="25" cy="25" rx="25" ry="25" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" />
-                </svg>
+          <li class="faq__item accordion">
+            <h3 class="title-h3 ac-header">
+              <button class="btn btn_reset faq__btn flex accordion__control">
+                <div class="faq__btn-wrapper">
+                  <span class="faq__btn-text">
+                    У&nbsp;меня есть свой проект. Сможем&nbsp;ли мы&nbsp;его доработать&nbsp;/ реализовать?
+                  </span>
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="25" rx="25" ry="25" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" />
+                  </svg>
+                </div>
+                <div class="accordion__content">
+                  <p class="text accordion__text-1">
+                    Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
+                    нас
+                    к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+                    Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью
+                    первоочередных требований. А&nbsp;ещё некоторые особенности внутренней политики, которые
+                    представляют собой яркий пример континентально-европейского типа политической культуры, будут
+                    объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. И&nbsp;нет сомнений, что явные
+                    признаки победы институционализации призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+                    очередь, должны быть указаны как претенденты на&nbsp;роль ключевых факторов.
+                  </p>
+                  <p class="text accordion__text">
+                    Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны
+                    к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определённых
+                    слоёв населения,
+                    а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные,
+                    но&nbsp;неопровержимые выводы,
+                    а&nbsp;также многие известные личности призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+                    очередь, должны быть представлены в&nbsp;исключительно положительном свете.
+                  </p>
+                </div>
               </button>
             </h3>
           </li>
-          <li class="faq__item">
-            <h3 class="title-h3">
-              <button class="btn btn_reset faq__btn flex">
-                <span class="faq__btn-text">
-                Я&nbsp;выбираю между разными компаниями. В&nbsp;чём ваше отличие?
-                </span>
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <ellipse cx="25" cy="25" rx="25" ry="25" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" />
-                </svg>
+          <li class="faq__item accordion">
+            <h3 class="title-h3 ac-header">
+              <button class="btn btn_reset faq__btn flex accordion__control">
+                <div class="faq__btn-wrapper">
+                  <span class="faq__btn-text">
+                    Я&nbsp;выбираю между разными компаниями. В&nbsp;чём ваше отличие?
+                  </span>
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="25" rx="25" ry="25" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" />
+                  </svg>
+                </div>
+                <div class="accordion__content">
+                  <p class="text accordion__text-1">
+                    Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
+                    нас
+                    к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+                    Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью
+                    первоочередных требований. А&nbsp;ещё некоторые особенности внутренней политики, которые
+                    представляют собой яркий пример континентально-европейского типа политической культуры, будут
+                    объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. И&nbsp;нет сомнений, что явные
+                    признаки победы институционализации призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+                    очередь, должны быть указаны как претенденты на&nbsp;роль ключевых факторов.
+                  </p>
+                  <p class="text accordion__text">
+                    Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны
+                    к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определённых
+                    слоёв населения,
+                    а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные,
+                    но&nbsp;неопровержимые выводы,
+                    а&nbsp;также многие известные личности призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+                    очередь, должны быть представлены в&nbsp;исключительно положительном свете.
+                  </p>
+                </div>
               </button>
             </h3>
           </li>
-          <li class="faq__item">
-            <h3 class="title-h3">
-              <button class="btn btn_reset faq__btn flex">
-                <span class="faq__btn-text">
-                Могу&nbsp;ли я&nbsp;делегировать вам работу&nbsp;/ согласование с&nbsp;подрядчиком&nbsp;/организацией?
-                </span>
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <ellipse cx="25" cy="25" rx="25" ry="25" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" />
-                </svg>
+          <li class="faq__item accordion">
+            <h3 class="title-h3 ac-header">
+              <button class="btn btn_reset faq__btn flex accordion__control">
+                <div class="faq__btn-wrapper">
+                  <span class="faq__btn-text">
+                    Могу&nbsp;ли я&nbsp;делегировать вам работу&nbsp;/ согласование
+                    с&nbsp;подрядчиком&nbsp;/организацией?
+                  </span>
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="25" rx="25" ry="25" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" />
+                  </svg>
+                </div>
+                <div class="accordion__content">
+                  <p class="text accordion__text-1">
+                    Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
+                    нас
+                    к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+                    Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью
+                    первоочередных требований. А&nbsp;ещё некоторые особенности внутренней политики, которые
+                    представляют собой яркий пример континентально-европейского типа политической культуры, будут
+                    объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. И&nbsp;нет сомнений, что явные
+                    признаки победы институционализации призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+                    очередь, должны быть указаны как претенденты на&nbsp;роль ключевых факторов.
+                  </p>
+                  <p class="text accordion__text">
+                    Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны
+                    к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определённых
+                    слоёв населения,
+                    а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные,
+                    но&nbsp;неопровержимые выводы,
+                    а&nbsp;также многие известные личности призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+                    очередь, должны быть представлены в&nbsp;исключительно положительном свете.
+                  </p>
+                </div>
               </button>
             </h3>
           </li>
-          <li class="faq__item">
-            <h3 class="title-h3">
-              <button class="btn btn_reset faq__btn flex">
-                <span class="faq__btn-text">
-                Могу&nbsp;ли я&nbsp;вернуть деньги на&nbsp;каком-либо из&nbsp;этапов работ?
-                </span>
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <ellipse cx="25" cy="25" rx="25" ry="25" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" />
-                </svg>
+          <li class="faq__item accordion">
+            <h3 class="title-h3 ac-header">
+              <button class="btn btn_reset faq__btn flex accordion__control">
+                <div class="faq__btn-wrapper">
+                  <span class="faq__btn-text">
+                    Могу&nbsp;ли я&nbsp;вернуть деньги на&nbsp;каком-либо из&nbsp;этапов работ?
+                  </span>
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="25" rx="25" ry="25" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" />
+                  </svg>
+                </div>
+                <div class="accordion__content">
+                  <p class="text accordion__text-1">
+                    Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
+                    нас
+                    к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+                    Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью
+                    первоочередных требований. А&nbsp;ещё некоторые особенности внутренней политики, которые
+                    представляют собой яркий пример континентально-европейского типа политической культуры, будут
+                    объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. И&nbsp;нет сомнений, что явные
+                    признаки победы институционализации призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+                    очередь, должны быть указаны как претенденты на&nbsp;роль ключевых факторов.
+                  </p>
+                  <p class="text accordion__text">
+                    Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны
+                    к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определённых
+                    слоёв населения,
+                    а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные,
+                    но&nbsp;неопровержимые выводы,
+                    а&nbsp;также многие известные личности призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+                    очередь, должны быть представлены в&nbsp;исключительно положительном свете.
+                  </p>
+                </div>
               </button>
             </h3>
           </li>
@@ -470,6 +606,9 @@
       </div>
     </div>
   </footer>
+  <script src="libs/accordion.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
