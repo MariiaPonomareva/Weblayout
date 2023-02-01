@@ -293,7 +293,6 @@ body {
 
 .header__search_active {
   display: flex;
-  transform: none;
 }
 
 .header__input {
