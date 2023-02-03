@@ -62,7 +62,7 @@
           </ul>
         </nav>
         <div class="header__search-wrapper">
-          <button class="btn btn_reset header__search header__search_unactive">
+          <button class="btn btn_reset header__search">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="7.56126" height="1.89031"
                 transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" />
@@ -70,25 +70,26 @@
                 d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" />
             </svg>
           </button>
-          <form class="header__search-form flex header__search_active" action="https://jsonplaceholder.typicode.com/posts" method="post">
+          <form class="header__search-form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
             <input class="header__input" type="text" name="search" placeholder="Что будем искать?">
-            <button class="btn btn_reset header__search-btn" type="submit">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="7.56126" height="1.89031"
-                  transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" />
-                <path
-                  d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" />
-              </svg>
-            </button>
-            <button class="btn btn_reset header__search-close" type="reset">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" />
-                <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291"
-                  transform="rotate(-45 7.30469 15.5524)" />
-                <circle cx="12" cy="12" r="11" stroke-width="2" />
-              </svg>
-
-            </button>
+            <div class="header__search-form-wrapper flex">
+              <button class="btn btn_reset header__search-btn" type="submit">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="7.56126" height="1.89031"
+                    transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" />
+                  <path
+                    d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" />
+                </svg>
+              </button>
+              <button class="btn btn_reset header__search-close" type="reset">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" />
+                  <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291"
+                    transform="rotate(-45 7.30469 15.5524)" />
+                  <circle cx="12" cy="12" r="11" stroke-width="2" />
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
       </div>
