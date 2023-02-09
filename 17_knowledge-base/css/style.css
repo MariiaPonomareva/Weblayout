@@ -1,0 +1,367 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  padding: 50px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #424242;
+}
+
+h2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+/* Custom checkbox */
+.custom-checkbox-wrapper {
+  margin-bottom: 50px;
+  max-width: 176px;
+  max-height: 309px;
+  background-color: #fff;
+  padding: 21px 29px 29px 30px;
+  border-radius: 10px;
+}
+
+.custom-checkbox_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #333;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+.custom-checkbox__input:focus + .custom-checkbox__text {
+  outline: 1px solid #333;
+}
+
+.category-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.category-item {
+  margin-bottom: 20px;
+}
+
+.custom-checkbox {
+  display: block;
+  user-select: none;
+  cursor: pointer;
+}
+
+.custom-checkbox__text {
+  position: relative;
+  padding-left: 25px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333;
+  outline: transparent;
+  transition: outline 0.3s ease-in-out;
+}
+
+.custom-checkbox__text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999999;
+  border-radius: 3px;
+}
+
+.custom-checkbox__text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background-image: url("../imgs/checked.svg");
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.custom-checkbox__input:checked+.custom-checkbox__text::after {
+  opacity: 1;
+}
+
+.custom-checkbox__input:checked + .custom-checkbox__text::before {
+  border: 1px solid #ccb26e;
+}
+
+/* Custom select */
+.custom-select-wrapper {
+margin-bottom: 50px;
+max-width: 176px;
+max-height: 293px;
+background-color: #fff;
+border-radius: 10px;
+}
+
+.choices {
+	width: 176px;
+}
+
+.choices:focus {
+  border: outset;
+  border: 2px solid #333;
+  border-radius: 10px;
+}
+
+.choices__list--dropdown .choices__placeholder {
+	display: none;
+}
+
+.choices__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 9px 0 11px 15px;
+  min-height: 39px;
+  background-color: #fff;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.choices__list--single {
+  padding: 0;
+}
+
+.choices__placeholder {
+  font-size: 14px;
+  line-height: 19px;
+  opacity: 1;
+}
+
+.choices[data-type*=select-one]::after {
+  margin: 0;
+  width: 16px;
+  height: 8px;
+  right: 15px;
+  border: none;
+  background-image: url(../imgs/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.choices[data-type*=select-one].is-open::after {
+  z-index: 2;
+  margin: 0;
+  background-image: url(../imgs/arrow-up.svg);
+}
+
+.is-focused.is-open .choices__inner {
+  position: relative;
+  border: 1px solid #ccb26e;
+  border-radius: 10px;
+}
+
+.choices__list.choices__list--dropdown.is-active {
+  margin-top: -10px;
+  border: 1px solid #ccb26e;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.choices__list--dropdown {
+  padding: 30px 0 20px 15px;
+}
+
+.choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable {
+  padding: 0;
+}
+
+.choices__item--choice {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.choices__item--choice:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* Map */
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.map-wrapper {
+  margin-bottom: 50px;
+}
+
+/* custom scrollbar */
+.scrollbar-wrapper {
+  margin-bottom: 50px;
+  padding: 20px 30px;
+  height: 310px;
+  width: 399px;
+  background-color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  color: #333;
+}
+
+.simplebar-content-wrapper {
+  scrollbar-width: auto;
+  -ms-overflow-style: auto;
+}
+
+.simplebar-content-wrapper::-webkit-scrollbar,
+.simplebar-hide-scrollbar::-webkit-scrollbar {
+  display: initial;
+  width: initial;
+  height: initial;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+  background-color: #ccb26e;
+  opacity: 1;
+}
+
+/* form validation */
+.form {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  width: 440px;
+  height: 410px;
+  background-color: #282828;
+  border-radius: 10px;
+}
+
+.form__input {
+  display: inline-block;
+  padding: 24px 20px;
+  width: 380px;
+  height: 60px;
+  background: #fff;
+  border: 1px solid #ff5c00;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #999;
+}
+
+.form__label {
+  margin-bottom: 14px;
+}
+
+.last-label {
+  margin-bottom: 31px;
+}
+
+.form__btn {
+  display: inline-block;
+  width: 192px;
+  height: 60px;
+  background: #ff5c00;
+  border: #ff5c00;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.just-validate-error-label {
+  margin-bottom: 4px;
+  padding-left: 20px;
+  color: #ff5c00;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+/* Tooltip */
+.custom-tooltip-wrapper {
+  height: 160px;
+  width: 375px;
+  padding: 20px 78px 20px 29px;
+  background-color: #fff;
+}
+
+.text {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  color: #333;
+}
+
+.tolltip-btn {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 0;
+  border: none;
+}
+
+.tolltip-btn svg {
+  fill: #bcbcbc;
+  transition: fill 0.3s ease-in-out;
+}
+
+.tolltip-btn:hover svg,
+.tolltip-btn:focus svg {
+  fill: #ccb26e;
+}
+
+.tolltip-btn:focus {
+  outline: transparent;
+  border: none;
+}
+
+.tippy-box {
+  border-radius: 0;
+}
