@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const validation = new JustValidate('.form');
+  const validation = new JustValidate('.form', {
+    errorLabelStyle: {
+      color: '#ff5c00',
+    }
+  });
   const element = document.querySelector('.select');
   const choices = new Choices(element, {
     searchEnabled: false,

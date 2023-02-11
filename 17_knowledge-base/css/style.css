@@ -309,14 +309,16 @@ border-radius: 10px;
 }
 
 .form__label {
-  display: flex;
-  flex-direction: column-reverse;
+  position: relative;
+  padding-top: 20px;
 }
 
 .just-validate-error-label {
+  position: absolute;
+  top: 0;
+  left: 0;
   margin-bottom: 4px;
   padding-left: 20px;
-  color: #ff5c00;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
