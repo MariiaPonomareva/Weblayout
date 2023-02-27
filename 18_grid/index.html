@@ -21,7 +21,7 @@
         <img src="imgs/logo.svg" alt="Логотип компании Skillbox">
       </a>
       <nav class="nav header__nav" title="Навигационное меню">
-        <ul class="nav__list list_reset flex">
+        <ul class="nav__list list-reset flex">
           <li class="nav__item">
             <a href="#" class="nav__link">
               Главная
@@ -74,10 +74,6 @@
               Выбрать курс
             </button>
           </div>
-          <picture class="hero__picture col-sm-6 col-lg-7">
-            <source srcset="imgs/hero-bg-tablet.svg" media="(max-width: 1200px)">
-            <img class="hero__img" src="imgs/hero-bg-img.svg" alt="">
-          </picture>
         </div>
       </div>
     </section>
@@ -94,16 +90,16 @@
             исключительно в&nbsp;разрезе маркетинговых предпосылок.
           </p>
         </div>
-        <ul class="row list_reset advantages__list">
+        <ul class="row list-reset advantages__list">
           <li class="col-md-4 col-lg-4 advantages__item eye">
-            <span class="advantages__text">Результат вашего обучения является самым важным для нас приоритетом</span>
+            <p class="advantages__text">Результат вашего обучения является самым важным для нас приоритетом</p>
           </li>
           <li class="col-md-4 col-lg-4 advantages__item fingers">
-            <span class="advantages__text">Лично познакомитесь с одним из своих будущих преподавателей</span>
+            <p class="advantages__text">Лично познакомитесь с одним из своих будущих преподавателей</p>
           </li>
           <li class="col-md-4 col-lg-4 advantages__item horn">
-            <span class="advantages__text">Значимость этих проблем очевидна, поэтому стоит всегда быть
-              внимательным</span>
+            <p class="advantages__text">Значимость этих проблем очевидна, поэтому стоит всегда быть
+              внимательным</p>
           </li>
         </ul>
       </div>
@@ -114,7 +110,7 @@
         <h2 class="section-title teachers__title">
           Преподаватели курсов
         </h2>
-        <ul class="row list_reset teachers__list">
+        <ul class="row list-reset teachers__list">
           <li class="col-sm-6 col-md-6 col-lg-6 col-xl-3 teachers__item">
             <picture class="teachers__picture">
               <source srcset="imgs/petrov-mobile.jpg" media="(max-width: 575px)">
@@ -190,17 +186,10 @@
         <h2 class="section-title courses__title">
           Курсы
         </h2>
-        <ul class="row list_reset courses__list">
-          <li class="col-xs-12 col-sm-6 col-lg-6 courses__item flex">
-            <div class="courses__info-wrapper flex">
-              <picture class="courses__picture">
-                <source srcset="imgs/courses-1-mobile.jpg" media="(max-width: 575px)">
-                <source srcset="imgs/courses-1-tablet2.jpg" media="(max-width: 767px)">
-                <source srcset="imgs/courses-1-tablet.jpg" media="(max-width: 1200px)">
-                <img class="courses__img" src="imgs/courses-1.jpg" alt="">
-              </picture>
+        <ul class="row list-reset courses__list">
+          <li class="col-xs-12 col-sm-6 col-lg-6 courses__item flex courses-1">
               <div class="courses__text-wrapper flex">
-                <div>
+                <div class="courses__descr-wrapper">
                   <h3 class="courses__name">
                     Cinema 4d&nbsp;для начинающих
                   </h3>
@@ -219,18 +208,10 @@
               <div class="course-hours">
                 60 часов
               </div>
-            </div>
           </li>
-          <li class="col-xs-12 col-sm-6 col-lg-6 courses__item flex">
-            <div class="courses__info-wrapper flex">
-              <picture class="courses__picture">
-                <source srcset="imgs/courses-2-mobile.jpg" media="(max-width: 575px)">
-                <source srcset="imgs/courses-2-tablet2.jpg" media="(max-width: 767px)">
-                <source srcset="imgs/courses-2-tablet.jpg" media="(max-width: 1200px)">
-                <img class="courses__img" src="imgs/courses-2.jpg" alt="">
-              </picture>
+          <li class="col-xs-12 col-sm-6 col-lg-6 courses__item flex courses-2">
               <div class="courses__text-wrapper flex">
-                <div>
+                <div class="courses__descr-wrapper">
                   <h3 class="courses__name">
                     Blender: продвинутый уровень
                   </h3>
@@ -246,20 +227,10 @@
               <div class="course-hours">
                 40 часов
               </div>
-            </div>
           </li>
-        </ul>
-        <ul class="row list_reset courses__list">
-          <li class="col-xs-12 col-sm-6 col-lg-6 courses__item flex">
-            <div class="courses__info-wrapper flex">
-              <picture class="courses__picture">
-                <source srcset="imgs/courses-3-mobile.jpg" media="(max-width: 575px)">
-                <source srcset="imgs/courses-3-tablet2.jpg" media="(max-width: 767px)">
-                <source srcset="imgs/courses-3-tablet.jpg" media="(max-width: 1200px)">
-                <img class="courses__img" src="imgs/courses-3.jpg" alt="">
-              </picture>
+          <li class="col-xs-12 col-sm-6 col-lg-6 courses__item flex courses-3">
               <div class="courses__text-wrapper flex">
-                <div>
+                <div class="courses__descr-wrapper">
                   <h3 class="courses__name">
                     Визуализация в 3ds&nbsp;Max
                   </h3>
@@ -275,18 +246,10 @@
               <div class="course-hours">
                 40 часов
               </div>
-            </div>
           </li>
-          <li class="col-xs-12 col-sm-6 col-lg-6 courses__item flex">
-            <div class="courses__info-wrapper flex">
-              <picture class="courses__picture">
-                <source srcset="imgs/courses-4-mobile.jpg" media="(max-width: 575px)">
-                <source srcset="imgs/courses-4-tablet2.jpg" media="(max-width: 767px)">
-                <source srcset="imgs/courses-4-tablet.jpg" media="(max-width: 1200px)">
-                <img class="courses__img" src="imgs/courses-4.jpg" alt="">
-              </picture>
-              <div class="courses__text-wrapper flex">
-                <div>
+          <li class="col-xs-12 col-sm-6 col-lg-6 courses__item flex courses-4">
+            <div class="courses__text-wrapper flex">
+                <div class="courses__descr-wrapper">
                   <h3 class="courses__name">
                     Скульптинг в ZBrush
                   </h3>
@@ -304,17 +267,15 @@
               <div class="course-hours">
                 80 часов
               </div>
-            </div>
           </li>
         </ul>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer flex">
     <div class="container footer__container">
-      <div class="footer__wrapper">
-        <ul class="row list_reset footer__list">
+        <ul class="row list-reset footer__list">
           <li class="col-lg-3 footer__item">
             <a href="#" class="footer__link">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -380,12 +341,11 @@
             </a>
           </li>
         </ul>
-      </div>
     </div>
+    <small class="footer__trademark">
+      SKILLBOX ® 2021
+    </small>
   </footer>
-  <small class="footer__trademark">
-    SKILLBOX ® 2021
-  </small>
   <script src="js/index.js"></script>
 </body>
 
