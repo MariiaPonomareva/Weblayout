@@ -71,7 +71,7 @@ p {
 }
 
 /* glob */
-.list_reset {
+.list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -146,19 +146,14 @@ p {
   background-repeat: no-repeat;
 }
 
+.hero__container {
+  background-image: url('../imgs/hero-bg-img.svg');
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
 .hero__info {
   padding: 128px 0;
-}
-
-.hero__picture {
-  position: relative;
-  width: 631px;
-  height: 593px;
-}
-
-.hero__img {
-  position: absolute;
-  top: 13px;
 }
 
 .hero__title {
@@ -204,6 +199,7 @@ p {
 
 .advantages__title {
   margin-bottom: 16px;
+  padding-right: 110px;
   font-weight: 700;
   font-size: 40px;
   line-height: 100%;
@@ -220,7 +216,6 @@ p {
 
 .advantages__list,
 .teachers__list,
-.courses__list,
 .footer__list {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
@@ -325,6 +320,10 @@ p {
   padding-bottom: 49px;
 }
 
+.courses__list {
+  justify-content: center;
+}
+
 .courses__item {
   max-width: 540px;
   position: relative;
@@ -336,14 +335,33 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 27px;
+  padding-top: 185px;
   padding-left: 0;
   padding-right: 0;
   background-color: var(--blue-gray);
+  background-repeat: no-repeat;
+  background-position: top center;
   border-radius: 20px;
 }
 
 .courses__item:not(:nth-child(2n)) {
   margin-right: 30px;
+}
+
+.courses-1 {
+  background-image: url('../imgs/courses-1.jpg');
+}
+
+.courses-2 {
+  background-image: url('../imgs/courses-2.jpg');
+}
+
+.courses-3 {
+  background-image: url('../imgs/courses-3.jpg');
+}
+
+.courses-4 {
+  background-image: url('../imgs/courses-4.jpg');
 }
 
 .courses__title {
@@ -352,10 +370,6 @@ p {
   font-size: 40px;
   line-height: 100%;
   color: var(--deep-purple);
-}
-
-.courses__img {
-  border-radius: 23px 23px 0 0;
 }
 
 .courses__info-wrapper {
@@ -388,8 +402,11 @@ p {
   color: var(--deep-purple);
 }
 
-.courses__descr {
+.courses__descr-wrapper {
   margin-bottom: 50px;
+}
+
+.courses__descr {
   font-size: 16px;
   line-height: 150%;
   color: var(--grey);
@@ -423,9 +440,10 @@ p {
 
 /* footer */
 .footer {
-  margin-bottom: 3px;
   max-height: 80px;
   padding: 28px 0;
+  padding-bottom: 0;
+  flex-direction: column;
   background-color: var(--dark-violet);
 }
 
@@ -443,9 +461,11 @@ p {
 .footer__container {
   max-width: 187px;
   padding: 0;
+  margin-bottom: 31px;
 }
 
 .footer__trademark {
   display: block;
   text-align: center;
+  background-color: var(--white);
 }
